@@ -1,0 +1,32 @@
+<%- include("./partials/header.ejs",{
+    title: "Allmovieshub | Contact",
+    description: "Contact the developer of Allmovieshub using the form provided on this page. The developer will get back to you as soon as possible.",
+    keywords: "Allmovieshub developer,Allmovieshub contact,"
+}) %>
+
+
+
+
+
+<div id="contact_container">
+    <h1>Contact Us</h1>
+    <p>Fill out the form below to contact the developer of Allmovieshub. The developer will get back to you as soon as possible.</p>
+    <form onsubmit="saveMessage(event)">
+        <div class="form_group
+        ">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="user_name" required>  
+        </div>
+        <div class="form_group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="user_email" required>
+        </div>
+        <div class="form_group">
+            <label for="message">Message</label>
+            <textarea name="message" id="user_message" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<%- include("./partials/footer.ejs") %>

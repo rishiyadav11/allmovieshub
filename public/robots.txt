@@ -1,0 +1,5 @@
+# Allow all web crawlers to access everything
+User-agent: *
+Disallow:
+
+Sitemap: https://www.allmovieshub.studio/sitemap.xml

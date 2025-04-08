@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <meta name="description" content="<%= description %>" />
+  <meta name="keywords" content="<%= keywords %>" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/contact.css" />
+  <link rel="stylesheet" href="/styles/footer.css" />
+  <link rel="stylesheet" href="/styles/movie_card.css" />
+  <link rel="stylesheet" href="/styles/pagination.css" />
+  <link rel="stylesheet" href="/styles/movie.css" />
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://allmovieshub.studio/" />
+  <meta property="og:locale" content="en_US en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AllMoviesHub" />
+  <meta property="og:url" content="https://allmovieshub.studio/" />
+  <meta property="og:site_name" content="AllMoviesHub" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNZX7KQM8G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-RNZX7KQM8G");
+  </script>
+
+
+</head>
+
+<body>
+  <header> <a href="#" id="image_container"> <img src="/images/horizontal_logo.jpg" alt="logo" /> </a>
+    <nav id="pc_nav">
+      <% const links = [{name: "HOME",url: "/",}, {name: "BOLLYWOOD MOVIES",url: "/category/bollywood-movies",}, {name: "HOLLYWOOD HINDI MOVIES",url: "/category/hollywood-hindi-dubbed",}, {name: "SOUTH HINDI MOVIES",url: "/category/south-hindi-dubbed",}, {name: "WEB SERIES",url: "/category/web-series",}]; %>
+      <% links.forEach((elem) => { %><a href="<%= elem.url %>">
+        <%= elem.name %>
+      </a>
+      <% }); %>
+      <div id="nav_search_container"> <input type="text" id="search_input_1" placeholder="Search..." id="nav_search" /> <i id="search_btn_1" class="fa-solid fa-magnifying-glass"></i> </div>
+    </nav>
+    <nav id="mobile_nav"> <button onclick="showAsideMenu()"> <i class="fa-solid fa-bars"></i> </button>
+      <% const redirectUrl = "https://offspringthisscarcely.com/f2hzqz837i?key=0c7d11d4e7eb7b38a83d1c36f742341d"; %>
+      <img src="/images/horizontal_logo.jpg" onclick='window.location.href="<%= redirectUrl %>"' alt="logo" />
+
+      <button onclick="toggleSearch()"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+    </nav>
+    <div id="mobile_nav_search_container"> <input id="search_input_2" type="text" placeholder="Search..." id="mobile_nav_search" />
+      <button id="search_btn_2"> Search </button>
+    </div>
+
+    <div id="header_links_top">
+      <% const links2 = [
+                    {
+                        name: "DUAL AUDIO CONTENT",
+                        icon: "fa-solid fa-headphones",
+                        bg: "64B81E",
+                        link: "/category/dual-audio-movies"
+                    },
+                    {
+                        name: "DESI JUNCTION",
+                        icon: "fa-solid fa-compass",
+                        bg: "EA4330",
+                        link: "/?search=18%2B"
+                    },
+                    {
+                        name: "CONTACT ME :)",
+                        icon: "fa-brands fa-telegram",
+                        bg: "229DE0",
+                        link: "/contact"
+                    },
+                    {
+                        name: "HOW TO DOWNLOAD",
+                        icon: "fa-solid fa-download",
+                        bg: "DE9924",
+                        link: "https://offspringthisscarcely.com/f2hzqz837i?key=0c7d11d4e7eb7b38a83d1c36f742341d"
+                    }
+                    ]
+                    %>
+      <% links2.forEach(link => { %><a style="background-color: #<%= link.bg %>; box-shadow: 0 0 7px 1px #<%= link.bg %>;" href="<%= link.link %>"> <i class="<%= link.icon %>"></i>
+        <%= link.name %>
+      </a>
+      <% }); %>
+    </div>
+    <div id="header_links_bottom">
+
+
+      <% const links3 = [
+                    { name: "480P", link: "/?search=480p" },
+                    { name: "720P", link: "/?search=720p" },
+                    { name: "1080P", link: "/?search=1080p" },
+                    { name: "2160P 4K", link: "https://offspringthisscarcely.com/f2hzqz837i?key=0c7d11d4e7eb7b38a83d1c36f742341d" },
+                    { name: "NETFLIX", link: "/category/netflix" },
+                    { name: "AMZN PRIME VIDEO", link: "/category/amazon-prime-video" },
+                    { name: "DISNEY+ HOTSTAR", link: "/category/disney-hotstar" },
+                    { name: "SONY LIV", link: "/category/sony-liv" },
+                    { name: "ZEE5", link: "/category/zee5" },
+                    { name: "JIO CINEMA", link: "/category/jiocinema" },
+                    { name: "HOICHOI", link: "/category/hoichoi" },
+                    { name: "ALTBALAJI", link: "/category/alt" },
+                    { name: "BENGALI", link: "/category/bengali" },
+                    { name: "GUJARATI", link: "/category/gujarati" },
+                    { name: "PUNJABI MOVIES", link: "/category/punjabi" },
+                    { name: "MARATHI MOVIES", link: "/category/marathi" },
+                    { name: "HINDI DUBBED MOVIES", link: "/category/hindi-dubbed-movies" },
+                    { name: "HOLLYWOOD HINDI DUBBED", link: "/category/hollywood-hindi-dubbed" },
+                    { name: "SOUTH HINDI DUBBED", link: "/category/south-hindi-dubbed" },
+                    { name: "BOLLYWOOD MOVIES", link: "/category/bollywood-movies" },
+                    { name: "WEB SERIES", link: "/category/web-series" }
+                ]; %>
+      <% links3.forEach(elem => { %><a href="<%= elem.link %>">
+        <%= elem.name %>
+      </a>
+      <% }); %>
+    </div><input id="header_search" type="text" placeholder="Search Movies or Web-Series here..." />
+    <aside id="side_menu" style="display: none;">
+      <div id="side_menu_top"> <button id="side_menu_close" onclick="hideAsideMenu()"> <i class="fa-solid fa-times"></i>
+        </button></div>
+      <% links.forEach((elem) => { %><a href="<%= elem.url %>">
+        <%= elem.name %>
+      </a>
+      <% }); %>
+    </aside>
+  </header>
